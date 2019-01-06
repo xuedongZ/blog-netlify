@@ -64,7 +64,7 @@ friends: [
 
 comment:
    type: disqus
-   script: 'https://airclouds-blog.disqus.com/embed.js'
+   script: 'https://xuedong.disqus.com/embed.js'
 
 # donate:
 #  img: img/donate.jpg
