@@ -20,7 +20,7 @@ permalink_defaults:
 
 # Site settings
 # 网站综合内容设置：
-SEOTitle: Jonesnow的博客 | JoneSnow's Blog
+SEOTitle: SnowEast的博客 | SnowEast's Blog
 email: xuedong6624@163.com
 description: "张雪冬的博客"
 keyword: "JS"
@@ -48,7 +48,7 @@ friends: [
         href: "https://geekplux.com/"
     },{
         title: "knowledgeformen",
-        href: "https://www.knowledgeformen.com/about/"
+        href: "https://www.knowledgeformen.com/"
     },{
         title: "It helps SEO",
         href: "#"
