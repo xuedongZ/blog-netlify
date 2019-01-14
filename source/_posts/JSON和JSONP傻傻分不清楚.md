@@ -8,13 +8,13 @@ tags:
 其实json和jsonp本质上都是字符串，只是jsonp是外层包裹了一层函数。
 
 ## JSON
-JSON是JavaScript对象记法（JavaScript Object Notation），它有很多好处，规模、可读性等，还有另外一点：他是Web上最流行语言（JavaScript）的内置记法。
-JSON 是存储和交换文本信息的语法，类似 XML。但JSON 比 XML 更小、更快，更易解析。
+JSON是JavaScript对象记法（JavaScript Object Notation），它有很多好处，规模、可读性等，还有另外一点：他是Web上最流行语言（JavaScript）的内置记法。JSON 是存储和交换文本信息的语法，类似 XML。但JSON 比 XML 更小、更快，更易解析。
 
 ### XML让位，JSON登场
 曾几何时，我们都把XML当作救星，这是一种人类可读、机器可解析的数据格式，也是原本要支持世界上所有数据需求的数据格式。刚开始开发XMLhttpRequest时，XML确实是大家交互数据采用的方法。
 XML 和所谓 HTML 的写法非常相似。XML 没有预定义的标签。在 HTML 中使用的标签（以及 HTML 的结构）是预定义的。HTML 文档只使用在 HTML 标准中定义过的标签。XML 允许创作者定义自己的标签和自己的文档结构。
-有这样一个资料：
+
+下面有这样一个资料：
 > 一個『名字』叫做多拉Ａ夢，身高『129.3』，體重『129.3』，喜歡的事物有吃『銅鑼燒』和『機油』，以及『和小咪約會』的機器人。
 
 【用XML方式存储】：
@@ -133,7 +133,7 @@ foo({
 ---
 参考文章：
 1.[【原创】说说JSON和JSONP，也许你会豁然开朗，含jQuery用例](https://www.cnblogs.com/dowinning/archive/2012/04/19/json-jsonp-jquery.html)
-2. [基本資料格式: XML 和 JSON](https://ithelp.ithome.com.tw/articles/10203632?sc=iThelpR)
-3. [面试问题之：JSON是什么？](https://blog.csdn.net/u011240877/article/details/46651249)
-4. [JSON与JS对象的区别](https://blog.csdn.net/Yeoman92/article/details/54924930)
-5. [浏览器同源政策及其规避方法](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
+2.[基本資料格式: XML 和 JSON](https://ithelp.ithome.com.tw/articles/10203632?sc=iThelpR)
+3.[面试问题之：JSON是什么？](https://blog.csdn.net/u011240877/article/details/46651249)
+4.[JSON与JS对象的区别](https://blog.csdn.net/Yeoman92/article/details/54924930)
+5.[浏览器同源政策及其规避方法](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
