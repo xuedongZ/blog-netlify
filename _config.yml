@@ -78,7 +78,7 @@ search:
 
 # 文章样式(是否首行缩进)：
 post_style:
-  indent: 0
+  indent: default
 
 # Custom Setting End
 # Directory
