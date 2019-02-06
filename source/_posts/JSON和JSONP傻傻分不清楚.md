@@ -15,17 +15,17 @@ JSON是JavaScript对象记法（JavaScript Object Notation），它有很多好�
 XML 和所谓 HTML 的写法非常相似。XML 没有预定义的标签。在 HTML 中使用的标签（以及 HTML 的结构）是预定义的。HTML 文档只使用在 HTML 标准中定义过的标签。XML 允许创作者定义自己的标签和自己的文档结构。
 
 下面有这样一个资料：
-> 一個『名字』叫做多拉Ａ夢，身高『129.3』，體重『129.3』，喜歡的事物有吃『銅鑼燒』和『機油』，以及『和小咪約會』的機器人。
+> 一个『名字』叫做多拉Ａ梦，身高『129.3』，体重『129.3』，喜欢的事物有吃『铜锣烧』和『机油』，以及『和小咪约会』的机器人。
 
 【用XML方式存储】：
 ```
 <robot>
-	<name>多拉A夢</name>
+	<name>多拉A梦</name>
 	<height>129.3</height>
 	<weight>129.3</weight>
 	<hobby>
-		<food>銅鑼燒、機油</food>
-		<relationship>和小咪約會</relationship>
+		<food>铜锣烧、机油</food>
+		<relationship>和小咪约会</relationship>
 	</hobby>
 </robot>
 ```
@@ -36,12 +36,12 @@ JSON 是存储和交换文本信息的语法。类似 XML。JSON 比 XML 更小�
 
 ```
 {
-	“name” : “多拉A夢”,
+	“name” : “多拉A梦”,
 	“height”: 129.3,
 	“weight”:129.3,
 	“hobby”:{
-		“food” : “銅鑼燒、機油”,
-		“relationship” : “和小咪約會”
+		“food” : “铜锣烧、机油”,
+		“relationship” : “和小咪约会”
 	}
 }
 ```
@@ -60,7 +60,7 @@ JSON所表示的数据要么就是对象，要么就是数组。
 数据构成的最小单位原来如此简单！难怪在编程语言中，只要有了数组（array）和对象（object）就能够储存一切数据了。
 JSON语法是javaScript语法的子集，javaScript用[]中括号来表示数组，用{}大括号来表示对象，JSON亦是如此。
 
-JSON数组：
+【JSON数组】：
 ```
 var employees = [
     { "firstName":"Bill" , "lastName":"Gates" },
@@ -68,7 +68,7 @@ var employees = [
     { "firstName":"Thomas" , "lastName": "Carter" }
 ];
 ```
-JSON对象
+【JSON对象】：
 ```
 var obj = {
 

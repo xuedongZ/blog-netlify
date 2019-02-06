@@ -5,9 +5,9 @@ date: 2016-04-21 04:48:33
 comments: true
 ---
 
-> 终于开始思考，自己该往何处走
+> 终于开始思考，该往何处走
 
-Mail：snoweast.zhang@qq.com
+Mail：xuedong6624@163.com
 
 2008.9-2012.6
 于重庆就读建筑环境与设备工程专业。
