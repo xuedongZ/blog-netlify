@@ -1,11 +1,13 @@
 ---
 title: VPS实用系之一，安全防护
 date: 2019-03-06 22:02:18
-tags:
+tags: 
+- 工具 
+- VPS
 ---
 
 
-VPS用有一年多了，最近发现梯子有时有失效，于是重装。开始意识到之前VPS一点安全措施都没做。
+VPS用了快两年，最近发现梯子有时有失效，于是重装。开始意识到之前VPS一点安全措施都没做。
 > 由于一台vps就相当于一台拥有独立IP的，直接暴露于互联网之上的电脑，这在为你带来便利的同时也直接让你的vps与危险画上了等号，密码穷举、DDOS攻击、各种各样你想到的想不到的攻击方法都在等待着你，不要相信你那惊悚的创意能想出多么强大的密码，统计学告诉我们——还是相信RSA吧！
 
 不信，我们在机器（包括平时使用的linxu的机器）上跑几个命令看看吧。
@@ -24,7 +26,7 @@ sudo grep "Failed password for invalid user" /var/log/auth.log | awk '{print $13
 
 看完倒吸一口凉气。
 
-想破解我的IP有744个，排名前三的是江苏、北京、四川的IP…看来必须行动起来了。
+想破解我的IP有744个，用 `whois` 查了一下，排名前三的是江苏、北京、四川的IP…看来必须行动起来了。
 
 **采取行动**
 
@@ -42,7 +44,9 @@ sudo grep "Failed password for invalid user" /var/log/auth.log | awk '{print $13
 `root@vultr:~#` apt-get update
 `root@vultr:~#` apt-get upgrade
 没用配置国内的源，速度嫌慢，就省略这步，否则需要等20mins。
-如果你的服务器只是用来安装一个SS或SSR应用，并没有其他非常重要的服务端服务，也许并不需要这种操作，因为这一过程实在太消耗时间和资源了。但是如果是有其他重要的数据服务，保证软件的安全补丁的及时更新还是十分必要的。
+对于自动每日更新，我们可以配置一些执行软件。至于是否必要，如果你的服务器只是用来安装一个SS或SSR应用，并没有其他非常重要的服务端服务，也许并不需要这种操作，因为这一过程实在太消耗时间和资源了。但是如果是有其他重要的数据服务，保证软件的安全补丁的及时更新还是十分必要的。
+
+普通使用者，只在第一次安装，或在几个发行周期之后才去更新都没问题。
 
 ### 用户设置
 
@@ -74,16 +78,21 @@ tail -3 /etc/sudoers
 建议：完成后不要登出系统，使用另一个视窗尝试登入 root 和普通帐号，测试无误便可进行下一步。
 
 ### 启用公钥验证登入 ssh
+在第一次部署VPS服务器没有勾选SSH，删除重装其实最简单的办法。可是这样旧套餐就没了。只能在部署的服务器上手动添加 SSH key。
 
 1.准备工作，**本地Mac**生成公钥：（可省略）
 在我的mac终端iterm中输入以下命令：
 `ssh-keygen -t rsa -b 4096`
 一路回车即可。成功后会在当前用户的 .ssh/ 文件夹下找到。
-一般程序员都有git帐号，肯定本地已经有SSH key了，不需要重复生成了。
 
-关于SSHkey的知识可参考
+本地已经有 SSH key 了，就不需要重复生成了。
+
+关于 SSH key 的知识可参考
+[SSH key的介绍与在Git中的使用](https://www.jianshu.com/p/1246cfdbe460)
 ssh官网：[https://www.ssh.com/ssh/keygen/]
 vultr官网：[https://www.vultr.com/docs/how-do-i-generate-ssh-keys/]
+
+
 
 2.将本地的公钥扔到服务器上去
 mac的终端item中：
@@ -100,7 +109,7 @@ scp .ssh/id_rsa.pub root@你的vps域名或者ip:~/
 chmod 700 ~/.ssh
 mv id_rsa.pub ~/.ssh
 cd .ssh
-mv id_rsa.pub authorized_keys   //因为是新系统，就直接改名。如果本身就有authorized_keys文件，就需要cat id_rsa.pub >> authorized_keys。将文件内容追加入authorized_keys。
+mv id_rsa.pub authorized_keys   //因为是新系统，就直接改名。 如果本身就有authorized_keys 文件，就需要cat id_rsa.pub >> authorized_keys。将文件内容追加入authorized_keys。
 chmod 600 authorized_keys
 
 ### 关闭所有帐户ssh密码登录
@@ -135,7 +144,7 @@ ssh root@<vps的域名或IP>        //不需要输入密码，直接登录了。
 ### 更换默认ssh端口
 >  /etc/ssh/sshd_config
 
-进入以上文件，注销，并新增。
+进入以上文件，注销22端口并新增。
 >
 >  #port 22
 >  port xxxxx   	  //你定义的端口，任何 1024 – 65535 之间的任何数字。知名端口，常用于系统服务等，例如http服务的端口号是80
@@ -171,7 +180,10 @@ vi 或 nano 进入以上文件，加入以下内容
 ＃在系统范围内的所有接口上禁用IPv6
 net.ipv6.conf.all.disable_ipv6 = 1
 ```
-保存退出，以后重启生效。
+要在 /etc/sysctl.conf 中激活这些更改，请运行：
+$ sudo sysctl -p /etc/sysctl.conf
+或者干脆重启VPS。
+
 
 ### Ddos攻击保护（vultr收费功能）
 别闹了，你就拿来装梯子的，没什么宝贵的商业机密。
@@ -180,7 +192,7 @@ net.ipv6.conf.all.disable_ipv6 = 1
 虚拟机是开发者的基本配置，他或多或少都承载着一些应用，充当着重要的网络节点。而一个没有防护的节点，就像带着流血的伤口，在鲨鱼出没的水域里游泳。俗称：肉鸡。
 网络虽然是自由的信息场，但也绝不是纯净的伊甸园。恩，得学会自我保护。
 
-经过这一惊吓，好像我应该改一改一些网络平台的帐号了(捂脸
+经过这一惊吓，好像应该改一改一些网络平台的帐号了(捂脸
 
 ***
 
