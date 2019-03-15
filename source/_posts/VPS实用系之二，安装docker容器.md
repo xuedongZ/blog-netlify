@@ -47,7 +47,7 @@ net.ipv4.tcp_congestion_control=bbr
 docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock \
 --name ui --restart=always lihaixin/portainer:me
 ```
-因为你是root进入的，所以你已经具备了管理员权限。所以不要输入提示的增加用户命令。不信，你输入`who`。你可以看到你的root身份。
+因为你是root进入的，所以你已经具备了管理员权限。所以不要输入提示的增加用户命令。不信，输入`who`,可以看到你的root身份。
 
 `docker ps `//就可以看到他已经运行在9000端口了
 进入管理界面：
