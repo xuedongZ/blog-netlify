@@ -2,7 +2,7 @@
 title: 【译】什么是 webpack 以及我为什么需要关注它？
 date: 2019-03-18 18:45:30
 tags:
-- javascirpt
+- JavaScript
 ---
 
 作者：Ciel
