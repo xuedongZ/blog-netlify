@@ -1,11 +1,11 @@
 ---
-layout: "about"
-title: "About"
+layout: 'about'
+title: 'About'
 date: 2016-04-21 04:48:33
 comments: true
 ---
 
-> 终于开始思考，该往何处走
+> Trust ink over memory, every mental read is a write.
 
 Mail：xuedong6624@163.com
 
@@ -16,4 +16,4 @@ Mail：xuedong6624@163.com
 在上海一家民营建筑设计院，从事建筑电气设计工作。
 
 2018.6-now
-离职，调整身心。同时学习JavaScript，为从事前端开发工作做准备。
+离职，调整身心。同时学习 JavaScript，为从事前端开发工作做准备。

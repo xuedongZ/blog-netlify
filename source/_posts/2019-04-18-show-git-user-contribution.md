@@ -5,7 +5,7 @@ tags:
   - 工具
 ---
 
-[GitHub](https://zh.wikipedia.org/wiki/GitHub)是程序员必不可少的学习和协作平台。他的[民间用途](http://www.longtask.net/2017/12/05/github-innovation/)很多，有托管代码、文章、博客，写电子书等等功能，几乎是需要天天用到。而且你仓库的变动可以通过主页下方的绿色方块来显示，这可以粗略的看出作者在平台上的活跃程度。
+[GitHub](https://zh.wikipedia.org/wiki/GitHub)是程序员必不可少的学习和协作平台。他的[民间用途](http://www.longtask.net/2017/12/05/github-innovation/)很多，有托管代码、文章、博客，写电子书等等功能，几乎需要天天用到。而且我们的仓库变动可以通过主页下方的绿色方块来显示，这可以粗略的看出作者在平台上的活跃程度。
 
 说来惭愧，很长一段时间里，我的 github contribution 本地记录都没正常显示。生活往往是这样，在你不知所以然的时候，也可以有模有样的做下去。
 
@@ -65,7 +65,7 @@ git config --global user.email "你的 email@xxx.xxx"
 
 ### 修改历史项目错误帐号
 
-事先声明，需要一个项目一个项目的改，如果不怕麻烦，我们做以下操作：
+事先声明：我们需要一个项目一个项目修改，且项目提交操作是在一年之内才能恢复到 contributions。不怕麻烦，觉得有必要的话，我们就继续以下操作：
 
 1.下载项目 repo 到本地
 `cd repo.git`
