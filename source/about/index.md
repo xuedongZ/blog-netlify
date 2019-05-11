@@ -7,13 +7,18 @@ comments: true
 
 > Trust ink over memory, every mental read is a write.
 
-Mail：xuedong6624@163.com
 
-2008.9-2012.6
-于重庆就读建筑环境与设备工程专业。
+每一段旅程，都是新的开始，漫短人生，只有更多去经历，去探索，去体验，才能欣赏更多风景，感受更多美妙。
+雷雨风浪，可迎而往之；曼卷荼藦，可静而品之。
+此生可待。
 
-2012.7-2018.6
-在上海一家民营建筑设计院，从事建筑电气设计工作。
-
-2018.6-now
-离职，调整身心。同时学习 JavaScript，为从事前端开发工作做准备。
+```
+var me = {
+	name: "xuedong",
+	birth: new Date(1989, 12, 21),
+	career: "Programmer",
+	hobby: ["Design", "Travel"],
+	location: "Shanghai, CHINA"
+	Mail: xuedong6624@163.com
+}
+```
