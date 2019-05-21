@@ -2,7 +2,7 @@
 title: 为什么 Github 不显示 contribution 记录
 date: 2019-04-18 10:55:10
 tags:
-  - 工具
+  - tools
 ---
 
 [GitHub](https://zh.wikipedia.org/wiki/GitHub)是程序员必不可少的学习和协作平台。他的[民间用途](http://www.longtask.net/2017/12/05/github-innovation/)很多，有托管代码、文章、博客，写电子书等等功能，几乎需要天天用到。而且我们的仓库变动可以通过主页下方的绿色方块来显示，这可以粗略的看出作者在平台上的活跃程度。
