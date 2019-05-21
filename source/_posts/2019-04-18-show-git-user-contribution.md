@@ -52,7 +52,7 @@ git config --global user.email "你的 email@xxx.xxx"
 在 git 中 user.email 和用户名是一一对应的：
 如果 user.email 在 git 中已经注册，则显示 email 对应的 git 用户名。
 如果 user.email 在没有注册，则显示 user.name(为灰色)
-![未识别的帐户](https://github.com/xuedongZ/blog-img/blob/img/2019/Snip20190406_1.png)
+![未识别的帐户](https://raw.githubusercontent.com/xuedongZ/blog-img/img/2019/Snip20190406_1.png)
 
 ## 补救办法
 
@@ -65,7 +65,7 @@ git config --global user.email "你的 email@xxx.xxx"
 
 ### 修改历史项目错误帐号
 
-事先声明：我们需要一个项目一个项目修改，且项目提交操作是在一年之内才能恢复到 contributions。不怕麻烦，觉得有必要的话，我们就继续以下操作：
+先做个心理准备：项目需要挨个修改；一年之内的提交才能恢复到 contributions。然后继续以下操作：
 
 1.下载项目 repo 到本地
 `cd repo.git`
