@@ -69,6 +69,6 @@ tags:
 ---
 
 拓展阅读：
-[Github 做图床][https://aicv.club/?p=27]
-[国内对象存储免费额度对比 & 图床工具][https://blog.iwyc.cn/storage]
-[嗯，图片就交给它了][https://sspai.com/post/40499]
+[Github 做图床](https://aicv.club/?p=27)
+[国内对象存储免费额度对比 & 图床工具](https://blog.iwyc.cn/storage)
+[嗯，图片就交给它了](https://sspai.com/post/40499)
