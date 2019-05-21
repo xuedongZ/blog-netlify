@@ -52,7 +52,7 @@ git config --global user.email "你的 email@xxx.xxx"
 在 git 中 user.email 和用户名是一一对应的：
 如果 user.email 在 git 中已经注册，则显示 email 对应的 git 用户名。
 如果 user.email 在没有注册，则显示 user.name(为灰色)
-![未识别的帐户](https://ws3.sinaimg.cn/large/006tNc79gy1g26lrvcxm3j31ac0fsdhz.jpg)
+![未识别的帐户](https://github.com/xuedongZ/blog-img/blob/img/2019/Snip20190406_1.png)
 
 ## 补救办法
 

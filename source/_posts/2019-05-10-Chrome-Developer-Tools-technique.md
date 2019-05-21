@@ -278,3 +278,8 @@ NetWork
 推荐官方文档：[时间线时间参考](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/performance-reference?hl=zh-cn)
 
 其他技巧，待补充...
+
+---
+
+参考：
+chrome devtools [官方文档](https://developers.google.com/web/tools/chrome-devtools/)查阅更多内容。
