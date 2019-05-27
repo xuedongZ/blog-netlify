@@ -81,14 +81,14 @@ css 样式可以使页面化腐朽为神奇，应多练多用。学习地址：[
 4.使用自适应单位：rpx。
 使用 rpx 可以使组件自适应屏幕的高度和宽度。小程序编译后，rpx 会做一次 px 换算。换算是以 375 个物理像素为基准，也就是在一个宽度为 375 物理像素的屏幕下，1rpx = 1px。举个例子：iPhone6 屏幕宽度为 375px，共 750 个物理像素，那么 1rpx = 375 / 750 px = 0.5px。推荐用 iPhone 6 的尺寸来做设计图，换算起来比较方便。
 
-5.通过 swiper 组件实现轮播，比如<swiper indicator-dots=“true” autoplay=“true” interval=“5000”，为每隔 5s 换一张图片。
+5.通过 swiper 组件实现轮播，比如`<swiper indicator-dots=“true” autoplay=“true” interval=“5000”>`，为每隔 5s 换一张图片。
 
 6.image 组件的 4 种缩放方式和 9 种裁剪方式：
 
 - scaletoFill，aspectFit，aspectFill，widthfix；
 - top，bottom，center，left，right，top left，top right，bottom left，bottom right。
 
-  7.[页面生命周期函数](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/app.html)：
+7.[页面生命周期函数](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/app.html)：
 
 - onload：小程序初始化完成时（全局只触发一次）
 - onshow：小程序启动，或从后台进入前台显示时
@@ -96,38 +96,39 @@ css 样式可以使页面化腐朽为神奇，应多练多用。学习地址：[
 - onError：小程序发生脚本错误，或者 api 调用失败时触发，会带上错误信息
 - onPageNotFound：小程序要打开的页面不存在时触发，会带上页面信息回调该函数
 
-  8.页面相关事件处理函数
-  onPullDownPrefresh：监听用户下拉动作
-  onReachBottom：页面上拉触底事件的处理函数
-  onShareAppMessage：用户点击右上角转发
-  onPageScroll：页面滚动触发事件的处理函数
+8.页面相关事件处理函数
 
-  9.小程序最多只能有 5 层页面。
-  当我们使用 navigateTo 从父页面跳转到子页面后，就形成了 2 个页面层级。可以继续在子页面使用 navigateTO 跳转子页面。但小程序强制规定，只允许最多五层父子页面。事实上，太多的子页面将严重影响用户的产品体验。建议页面最多不要超过 3 层。
-  redirectTo 不存在这个问题，因为当跳转到另一个页面后，上一个页面被强制卸载掉了。
+onPullDownPrefresh：监听用户下拉动作
+onReachBottom：页面上拉触底事件的处理函数
+onShareAppMessage：用户点击右上角转发
+onPageScroll：页面滚动触发事件的处理函数
 
-  10.常见的冒泡事件：
-  touchstart：手动触摸动作开始
-  touchmove：手动触摸后移开
-  touchcancle：手动触摸动作被打断，如来电提醒，弹窗
-  touchhend：手动触摸动作结束
-  tap：手动触摸后马上离开
-  longpress：手动触摸后，超过 350ms 再离开，如果指定了事件回调函数并触发了这个事件，tap 事件将不被触发
-  longtap：手动触摸后，超过 350ms 再离开（推荐使用 longpress 事件代替）
+9.小程序最多只能有 5 层页面。
+当我们使用 navigateTo 从父页面跳转到子页面后，就形成了 2 个页面层级。可以继续在子页面使用 navigateTO 跳转子页面。但小程序强制规定，只允许最多五层父子页面。事实上，太多的子页面将严重影响用户的产品体验。建议页面最多不要超过 3 层。
+redirectTo 不存在这个问题，因为当跳转到另一个页面后，上一个页面被强制卸载掉了。
 
-  11.组件是小程序页面的基本组成单元。其内置组件的类别有：
-  视图容器：view、scroll-view、swiper、movable-view、cover-view、cover-image；
-  基础内容：icon、text、rich-text、porgress；
-  表单组件：button、checkbox、form、input、label、picker、picker-view、radio、slider、switch、textarea；
-  导航：navgator、function-page-navigator
-  媒体组件：audio、image、video、camera、live-player、live-pusher
-  地图：map
-  画布：canvas
-  ps：一些原生组件使用时，要注意其限制。有 camera、canvas、input（仅在 focus 时）、live-player、live-pusher、map、textarea、video。
+10.常见的冒泡事件：
+touchstart：手动触摸动作开始
+touchmove：手动触摸后移开
+touchcancle：手动触摸动作被打断，如来电提醒，弹窗
+touchhend：手动触摸动作结束
+tap：手动触摸后马上离开
+longpress：手动触摸后，超过 350ms 再离开，如果指定了事件回调函数并触发了这个事件，tap 事件将不被触发
+longtap：手动触摸后，超过 350ms 再离开（推荐使用 longpress 事件代替）
 
-  12.小程序从基础库版本 2.2.1 开始支持使用 npm 安装第三方包，因此也支持开发和使用第三方自定义组件包。
+11.组件是小程序页面的基本组成单元。其内置组件的类别有：
+视图容器：view、scroll-view、swiper、movable-view、cover-view、cover-image；
+基础内容：icon、text、rich-text、porgress；
+表单组件：button、checkbox、form、input、label、picker、picker-view、radio、slider、switch、textarea；
+导航：navgator、function-page-navigator
+媒体组件：audio、image、video、camera、live-player、live-pusher
+地图：map
+画布：canvas
+ps：一些原生组件使用时，要注意其限制。有 camera、canvas、input（仅在 focus 时）、live-player、live-pusher、map、textarea、video。
 
-  13.可以用 ES6 编写代码，编译时最好勾选 ES6 转 ES5 以避免一些兼容性问题。
+12.小程序从基础库版本 2.2.1 开始支持使用 npm 安装第三方包，因此也支持开发和使用第三方自定义组件包。
+
+13.可以用 ES6 编写代码，编译时最好勾选 ES6 转 ES5 以避免一些兼容性问题。
 
 ### 发布、上线
 
