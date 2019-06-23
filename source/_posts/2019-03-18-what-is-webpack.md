@@ -7,7 +7,7 @@ tags:
 
 作者：Ciel
 出处：Medium
-原文链接：[https://medium.com/the-self-taught-programmer/what-is-webpack-and-why-should-i-care-part-1-introduction-ca4da7d0d8dc]
+原文链接：https://medium.com/the-self-taught-programmer/what-is-webpack-and-why-should-i-care-part-1-introduction-ca4da7d0d8dc
 
 ---
 
