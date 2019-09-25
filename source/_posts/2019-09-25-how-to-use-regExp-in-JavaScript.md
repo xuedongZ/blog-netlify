@@ -404,8 +404,8 @@ console.log(res);
 
 最后，推荐 2 个 Regex 测试器，
 
-- [https://regex101.com/] 这是目前（2019）网上最方便的。
-- [https://regexper.com/] 对于一个复杂正则表达式，它可以解析成图形，帮助理解。
+- https://regex101.com/ 这是目前（2019）网上最方便的。
+- https://regexper.com/ 对于一个复杂正则表达式，它可以解析成图形，帮助理解。
 
 示范：想知道`/^@[a-zA-Z]d+@$/`在干什么，将其输入，得到解析图形如下:
 ![](https://raw.githubusercontent.com/xuedongZ/blog-img/img/2019/regImg.png)
