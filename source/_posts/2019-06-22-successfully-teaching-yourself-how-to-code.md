@@ -1,5 +1,5 @@
 ---
-title: '[译]successfully-teaching-yourself-how-to-code'
+title: '[译] successfully-teaching-yourself-how-to-code'
 date: 2019-06-22 23:40:31
 tags:
   - methods
