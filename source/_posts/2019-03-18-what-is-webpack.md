@@ -9,8 +9,6 @@ tags:
 出处：Medium
 原文链接：https://medium.com/the-self-taught-programmer/what-is-webpack-and-why-should-i-care-part-1-introduction-ca4da7d0d8dc
 
----
-
 在今天的开发环境下学习 JavaScript 是一个相当令人畏惧的任务—因为这门语言发展到了从未有过的高度，相比从前你可以做更多的选择，即使最基础的入门教程也涵盖了大量的信息。在我们攀爬 JavaScript 的天梯时，我们在它「模块」知识点前稍作停留。
 
 ## 这个系列是写给谁看的？
