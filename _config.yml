@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SnowEast的博客
+title: xuedong的博客
 subtitle: sometimes code， sometimes design
-author: SnowEast
+author: xuedong
 language: zh
 timezone:
 
@@ -20,7 +20,7 @@ permalink_defaults:
 
 # Site settings
 # 网站综合内容设置：
-SEOTitle: SnowEast的博客 | SnowEast's Blog
+SEOTitle: xuedong的博客 | xuedong's Blog
 email: xuedong6624@163.com
 description: "张雪冬的博客"
 keyword: "JS"
