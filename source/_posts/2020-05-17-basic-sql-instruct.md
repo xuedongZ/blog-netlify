@@ -153,7 +153,9 @@ SQL是专门用来于数据库通信的语言。和其他语言不同的是，sq
 
 当然，还有其他的选择，这里不一一列出。
 
-## 获取数据
+## 操作数据
+
+### 获取
 
 1.取一栏或多栏数据
 
@@ -218,7 +220,7 @@ ORDER BY 2,3;
 
 
 
-## 过滤数据
+### 过滤数据
 
 1.使用WHERE 从句。
 
@@ -255,14 +257,57 @@ IS NULL|  为空值
 ### 高级的过滤
 
 在WHERE从句里面使用 AND；
+```sql
+SELECT prod_id, prod_price, prod_name
+FROM products
+WHERE vend_id = 1003 AND prod_price <= 10;
+```
 
 在WHERE从句里面使用 OR；
+```sql
+SELECT prod_name, prod_price
+FROM products
+WHERE vend_id = 1003 or prod_price <= 10;
+```
 
 在WHERE从句里面使用 IN；
+```sql
+SELECT prod_name, prod_price
+FROM products
+WHERE vend_id IN (1002,1003);
+ORDER BY prod_name;
+```
 
+在WHERE从句里面使用 NOT；NOT的作用，否定他之后跟的任何条件
+```sql
+SELECT prod_name, prod_price
+FROM products
+WHERE vend_id NOT IN (1002,1003);
+ORDER BY prod_name;
+```
+复杂的子句，NOT非常有用。
 
-
-
+### 添加（列）
+ALTER TABLE 语句用于在已有的表中添加、删除或修改列。
+```sql
+ALTER TABLE inventory_debit_sheets
+ADD COLUMN transporterId INT NOT NULL AFTER code;
+```
+### 更新
+```sql
+UPDATE enterprise_config set configJson = '',updatedAt = '2020-06-10 15:18:45' where uid =123;
+```
+### 创建
+```sql
+CREATE TABLE customers
+(
+  cust_id       int       NOT NULL AUTO_INCREMENT,
+  cust_name     char(50)  NOT NULL,
+  cust_address  char(50)  NOT NULL,
+  cust_zip      char(50)  NOT NULL,
+  PRIMSRY KEY (cust_id)
+) ENGINE = InnoDB;
+```
 
 ## 总结：
 
